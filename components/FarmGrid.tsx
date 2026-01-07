@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, memo } from 'react';
 import { Cell, Bug, Ufo, BingoLine, CriticalText } from '../types';
 import { CROPS, GRID_SIZE, COLORS, BUG_TRAVEL_TIME, UFO_CLICKS_REQUIRED, ASSET_PATHS } from '../constants';
@@ -231,11 +232,16 @@ const GridCell = memo(({ cell, fish, timeNow, ufoState, onCellClick, onUnlock, i
           )}
           
           <div className={`relative z-10 w-[70%] h-[70%] flex items-center justify-center transition-transform duration-500 ${isBeingAbducted ? 'animate-ping' : ''} ${isPestDamaged && !isRuined ? 'opacity-70 saturate-50' : ''}`} style={{ transform: `scale(${0.5 + (progress / 200)})` }}>
-             <img 
-               src={isRuined ? ASSET_PATHS.STATUS.WITHERED : crop.imageUrl} 
-               alt={crop.name} 
-               className="w-full h-full object-contain filter drop-shadow-sm" 
-             />
+             {isRuined ? (
+               <img src={ASSET_PATHS.STATUS.WITHERED} alt="Ruined" className="w-full h-full object-contain filter drop-shadow-sm" />
+             ) : (
+               <img 
+                 src={crop.imageUrl} 
+                 alt={crop.name} 
+                 className="w-full h-full object-contain filter drop-shadow-sm" 
+               />
+             )}
+             
              {isPestDamaged && !isRuined && (
                <img src={ASSET_PATHS.STATUS.WITHERED} alt="Damaged" className="absolute -bottom-1 -right-1 w-4 h-4 object-contain" />
              )}
@@ -361,3 +367,4 @@ export const FarmGrid: React.FC<FarmGridProps> = ({ cells, gold, fish, bugs, ufo
     </div>
   );
 };
+    

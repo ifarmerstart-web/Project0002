@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Inventory, Crop } from '../types';
 import { FISH_MARKET_ITEMS, CROPS, COLORS, ASSET_PATHS } from '../constants';
@@ -137,3 +138,4 @@ export const FishMarket: React.FC<FishMarketProps> = ({ fish, gold, inventory, o
     </div>
   );
 };
+    

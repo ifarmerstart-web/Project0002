@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Inventory, MarketState, Cell } from '../types';
 import { CROPS, ASSET_PATHS } from '../constants';
@@ -138,3 +139,4 @@ export const TopMarketSummary: React.FC<TopMarketSummaryProps> = ({
     </>
   );
 };
+    

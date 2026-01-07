@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { LineChart, Line, YAxis, ResponsiveContainer } from 'recharts';
 import { MarketState, Inventory } from '../types';
@@ -122,3 +123,4 @@ export const MarketDashboard: React.FC<MarketDashboardProps> = ({
     </div>
   );
 };
+    

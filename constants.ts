@@ -1,3 +1,4 @@
+
 import { Crop } from './types';
 
 export const GRID_SIZE = 4;
@@ -30,44 +31,44 @@ export const COLORS = {
   FRESH_LOW: '#ff4d4d', 
 };
 
-// --- ASSET MAPPING ---
-// Replace the values here with your actual local file paths (e.g. '/assets/images/icon-fish.png')
+// --- ASSET PATHS ---
+// Replaced imports with direct string paths to avoid module resolution errors
 export const ASSET_PATHS = {
   ICONS: {
-    FISH: 'https://placehold.co/64x64/0ea5e9/white?text=Fish&font=roboto', // icon-fish.png
-    GOLD: 'https://placehold.co/64x64/f59e0b/white?text=G&font=roboto', // icon-gold.png
-    TIMER: 'https://placehold.co/64x64/334155/white?text=Time&font=roboto', // icon-timer.png
-    LOCK: 'https://placehold.co/64x64/94a3b8/white?text=Lock&font=roboto', // icon-lock.png
-    WARNING: 'https://placehold.co/64x64/ef4444/white?text=Warn&font=roboto', // icon-warning.png
-    CLOSE: 'https://placehold.co/64x64/64748b/white?text=X&font=roboto', // icon-close.png
-    TARGET: 'https://placehold.co/64x64/10b981/white?text=Goal&font=roboto', // icon-target.png
-    HAND: 'https://placehold.co/64x64/f97316/white?text=Tap&font=roboto', // icon-tap.png
-    TREND_UP: 'https://placehold.co/32x32/ef4444/white?text=^&font=roboto', // icon-trend-up.png
-    TREND_DOWN: 'https://placehold.co/32x32/3b82f6/white?text=v&font=roboto', // icon-trend-down.png
-    FARM: 'https://placehold.co/64x64/10b981/white?text=Farm&font=roboto', // icon-farm.png
-    MARKET: 'https://placehold.co/64x64/3b82f6/white?text=Mkt&font=roboto', // icon-chart.png
-    SHOP: 'https://placehold.co/64x64/06b6d4/white?text=Shop&font=roboto', // icon-shop.png
-    BAG: 'https://placehold.co/64x64/f59e0b/white?text=Bag&font=roboto', // icon-bag.png
+    FISH: '.assets/images/ui/icon-fish.png',
+    GOLD: '.assets/images/ui/icon-gold.png',
+    TIMER: '.assets/images/ui/icon-timer.png',
+    LOCK: '.assets/images/ui/icon-lock.png',
+    WARNING: '.assets/images/ui/icon-warning.png',
+    CLOSE: '.assets/images/ui/icon-close.png',
+    TARGET: '.assets/images/ui/icon-target.png',
+    HAND: '.assets/images/ui/icon-hand.png',
+    TREND_UP: '.assets/images/ui/icon-trend-up.png',
+    TREND_DOWN: '.assets/images/ui/icon-trend-down.png',
+    FARM: '.assets/images/ui/icon-farm.png',
+    MARKET: '.assets/images/ui/icon-chart.png',
+    SHOP: '.assets/images/ui/icon-shop.png',
+    BAG: '.assets/images/ui/icon-bag.png',
   },
   NPCS: {
-    CAT_NEUTRAL: 'https://placehold.co/128x128/facc15/black?text=Cat&font=roboto', // npc-cat-neutral.png
-    CAT_HAPPY: 'https://placehold.co/128x128/facc15/black?text=Happy&font=roboto', // npc-cat-happy.png
-    CAT_SCARED: 'https://placehold.co/128x128/facc15/black?text=Scared&font=roboto', // npc-cat-scared.png
-    CAT_GOLDEN: 'https://placehold.co/128x128/fbbf24/white?text=GoldCat&font=roboto', // npc-cat-golden.png
-    BUG: 'https://placehold.co/80x80/a3e635/black?text=Bug&font=roboto', // entity-bug.png
-    UFO: 'https://placehold.co/128x128/a855f7/white?text=UFO&font=roboto', // entity-ufo.png
-    EXPLOSION: 'https://placehold.co/128x128/ef4444/white?text=Boom&font=roboto', // effect-explosion.png
+    CAT_NEUTRAL: 'assets/images/npc/npc-cat-neutral.png',
+    CAT_HAPPY: 'assets/images/npc/npc-cat-happy.png',
+    CAT_SCARED: 'assets/images/npc/npc-cat-scared.png',
+    CAT_GOLDEN: 'assets/images/npc/npc-cat-golden.png',
+    BUG: 'assets/images/npc/entity-bug.png',
+    UFO: 'assets/images/npc/entity-ufo.png',
+    EXPLOSION: 'assets/images/npc/effect-explosion.png',
   },
   ITEMS: {
-    GOLDEN_PAW: 'https://placehold.co/64x64/fbbf24/black?text=Paw&font=roboto', // item-golden-paw.png
-    INSTANT_GROW: 'https://placehold.co/64x64/3b82f6/white?text=Grow&font=roboto', // item-instant-grow.png
-    EMP: 'https://placehold.co/64x64/6366f1/white?text=EMP&font=roboto', // item-emp.png
-    BINGO: 'https://placehold.co/64x64/ec4899/white?text=Bingo&font=roboto', // item-bingo-master.png
+    GOLDEN_PAW: '.assets/images/item/item-golden-paw.png',
+    INSTANT_GROW: '.assets/images/item/item-instant-grow.png',
+    EMP: '.assets/images/item/item-emp.png',
+    BINGO: '.assets/images/item/item-bingo-master.png',
   },
   STATUS: {
-    WITHERED: 'https://placehold.co/64x64/78350f/white?text=Dead&font=roboto', // status-withered.png
-    FROZEN: 'https://placehold.co/64x64/bae6fd/black?text=Ice&font=roboto', // status-frozen.png
-    SPARKLE: 'https://placehold.co/64x64/fef08a/black?text=*&font=roboto', // effect-sparkle.png
+    WITHERED: '.assets/images/item/status-withered.png',
+    FROZEN: '.assets/images/item/status-frozen.png',
+    SPARKLE: '.assets/images/item/effect-sparkle.png',
   }
 };
 
@@ -113,22 +114,10 @@ export const FISH_MARKET_ITEMS = [
 ];
 
 const generateCrops = (): Crop[] => {
-  const categories = ['Vegetable', 'Fruit', 'Flower', 'Fantasy'] as const;
   const emojis = ['🥕', '🥔', '🌽', '🍅', '🍆', '🥦', '🥬', '🥒', '🌶️', '🫑', '🧅', '🧄', '🍠', '🥜', '🍎', '🍐', '🍊', '🍋', '🍌', '🍉', '🍇', '🍓', '🫐', '🍈', '🍒', '🍑', '🥭', '🍍', '🥥', '🥝', 'Lime', 'Papaya', 'Fig', 'Plum', 'Apricot', 'Pomegranate', 'Raspberry', 'Blackberry', 'Cranberry', 'Date', 'Guava', 'Lychee', 'Dragonfruit', 'Passionfruit', 'Sunflower', 'Rose', 'Tulip', 'Hibiscus', 'Sakura', 'Daisy', 'Lavender', 'Orchid', 'Lily', 'Lotus', 'Dandelion', 'Poppy', 'Marigold', 'Jasmine', 'Violet', 'Daffodil', 'Peony', 'Chrysanthemum', 'Begonia', 'Petunia', 'Starfruit', 'Moonberry', 'Fire Weed', 'Ice Root', 'Gold Leaf', 'Void Melon', 'Thunder Nut', 'Ghost Pepper', 'Mana Herb', 'Dragon Scale', 'Phoenix Bloom', 'Crystal Rose', 'Shadow Shroom', 'Light Bulb', 'Time Vine', 'Gravity Gourd', 'Nebula Nectar', 'Plasma Pod', 'Quantum Corn', 'Ether Apple'];
-  
+  const names = ["Carrot", "Potato", "Corn", "Tomato", "Eggplant", "Broccoli", "Lettuce", "Cucumber", "Chili", "Bell Pepper", "Onion", "Garlic", "Sweet Potato", "Radish", "Pumpkin", "Spinach", "Kale", "Zucchini", "Asparagus", "Celery", "Peas", "Beans", "Cauliflower", "Beetroot", "Turnip", "Parsnip", "Yam", "Okra", "Artichoke", "Leek", "Apple", "Pear", "Orange", "Lemon", "Banana", "Watermelon", "Grape", "Strawberry", "Blueberry", "Melon", "Cherry", "Peach", "Mango", "Pineapple", "Coconut", "Kiwi", "Lime", "Papaya", "Fig", "Plum", "Apricot", "Pomegranate", "Raspberry", "Blackberry", "Cranberry", "Date", "Guava", "Lychee", "Dragonfruit", "Passionfruit", "Sunflower", "Rose", "Tulip", "Hibiscus", "Sakura", "Daisy", "Lavender", "Orchid", "Lily", "Lotus", "Dandelion", "Poppy", "Marigold", "Jasmine", "Violet", "Daffodil", "Peony", "Chrysanthemum", "Begonia", "Petunia", "Starfruit", "Moonberry", "Fire Weed", "Ice Root", "Gold Leaf", "Void Melon", "Thunder Nut", "Ghost Pepper", "Mana Herb", "Dragon Scale", "Phoenix Bloom", "Crystal Rose", "Shadow Shroom", "Light Bulb", "Time Vine", "Gravity Gourd", "Nebula Nectar", "Plasma Pod", "Quantum Corn", "Ether Apple"];
+
   const crops: Crop[] = [];
-  const names = [
-    "Carrot", "Potato", "Corn", "Tomato", "Eggplant", "Broccoli", "Lettuce", "Cucumber", "Chili", "Bell Pepper", 
-    "Onion", "Garlic", "Sweet Potato", "Radish", "Pumpkin", "Spinach", "Kale", "Zucchini", "Asparagus", "Celery",
-    "Peas", "Beans", "Cauliflower", "Beetroot", "Turnip", "Parsnip", "Yam", "Okra", "Artichoke", "Leek",
-    "Apple", "Pear", "Orange", "Lemon", "Banana", "Watermelon", "Grape", "Strawberry", "Blueberry", "Melon",
-    "Cherry", "Peach", "Mango", "Pineapple", "Coconut", "Kiwi", "Lime", "Papaya", "Fig", "Plum",
-    "Apricot", "Pomegranate", "Raspberry", "Blackberry", "Cranberry", "Date", "Guava", "Lychee", "Dragonfruit", "Passionfruit",
-    "Sunflower", "Rose", "Tulip", "Hibiscus", "Sakura", "Daisy", "Lavender", "Orchid", "Lily", "Lotus",
-    "Dandelion", "Poppy", "Marigold", "Jasmine", "Violet", "Daffodil", "Peony", "Chrysanthemum", "Begonia", "Petunia",
-    "Starfruit", "Moonberry", "Fire Weed", "Ice Root", "Gold Leaf", "Void Melon", "Thunder Nut", "Ghost Pepper", "Mana Herb", "Dragon Scale",
-    "Phoenix Bloom", "Crystal Rose", "Shadow Shroom", "Light Bulb", "Time Vine", "Gravity Gourd", "Nebula Nectar", "Plasma Pod", "Quantum Corn", "Ether Apple"
-  ];
 
   names.forEach((name, index) => {
     let category: Crop['category'] = 'Vegetable';
@@ -137,14 +126,17 @@ const generateCrops = (): Crop[] => {
     if (index >= 80) category = 'Fantasy';
 
     const originalGrowthTime = 10 + Math.floor(index * 2.5);
-    // Apply 0.8 factor for faster gameplay
     const baseGrowthTime = Math.max(4, Math.floor(originalGrowthTime * 0.8 * 0.8));
     const seedPrice = 10 + Math.floor(index * 5);
     const sellMultiplier = 1.6 + (index * 0.015);
     const baseSellPrice = Math.floor(seedPrice * sellMultiplier);
-
-    // Placeholder image path - replace with `assets/crops/${name.toLowerCase().replace(/ /g, '-')}.png` in production
-    const imageUrl = `https://placehold.co/128x128/transparent/transparent?text=${name.substring(0,3)}&font=roboto`; 
+    
+    // Default image
+    let imageUrl = `https://placehold.co/128x128/transparent/transparent?text=${name.substring(0, 3).toUpperCase()}&font=roboto`;
+    
+    // Assign specific images if available
+    if (name === "Apple") imageUrl = './assets/images/ui/apple.png';
+    if (name === "Carrot") imageUrl = './assets/images/ui/carrot.png';
 
     crops.push({
       id: `crop_${index}`,

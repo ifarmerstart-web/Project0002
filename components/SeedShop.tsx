@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Crop } from '../types';
 import { ASSET_PATHS } from '../constants';
@@ -141,3 +142,4 @@ export const SeedShop: React.FC<SeedShopProps> = ({
     </div>
   );
 };
+    

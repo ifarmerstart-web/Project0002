@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Inventory, Crop } from '../types';
 import { CROPS, COLORS, ASSET_PATHS } from '../constants';
@@ -82,3 +83,4 @@ export const InventorySidebar: React.FC<InventorySidebarProps> = ({ inventory, g
     </div>
   );
 };
+    
