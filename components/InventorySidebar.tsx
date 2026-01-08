@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Inventory, Crop } from '../types';
+import { Inventory, Crop, InventoryItemData } from '../types';
 import { CROPS, COLORS, ASSET_PATHS } from '../constants';
 
 interface InventorySidebarProps {
@@ -11,7 +10,7 @@ interface InventorySidebarProps {
 }
 
 export const InventorySidebar: React.FC<InventorySidebarProps> = ({ inventory, gold, fish, onOpenFishMarket }) => {
-  const inventoryItems = Object.entries(inventory).filter(([_, item]) => item.count > 0);
+  const inventoryItems = (Object.entries(inventory) as [string, InventoryItemData][]).filter(([_, item]) => item.count > 0);
 
   return (
     <div className="w-full h-full flex flex-col bg-white">
@@ -83,4 +82,3 @@ export const InventorySidebar: React.FC<InventorySidebarProps> = ({ inventory, g
     </div>
   );
 };
-    

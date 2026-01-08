@@ -32,43 +32,44 @@ export const COLORS = {
 };
 
 // --- ASSET PATHS ---
-// Replaced imports with direct string paths to avoid module resolution errors
+// Base URL for external assets
+const BASE_PATH = 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main';
+
 export const ASSET_PATHS = {
   ICONS: {
-    FISH: '.assets/images/ui/icon-fish.png',
-    GOLD: '.assets/images/ui/icon-gold.png',
-    TIMER: '.assets/images/ui/icon-timer.png',
-    LOCK: '.assets/images/ui/icon-lock.png',
-    WARNING: '.assets/images/ui/icon-warning.png',
-    CLOSE: '.assets/images/ui/icon-close.png',
-    TARGET: '.assets/images/ui/icon-target.png',
-    HAND: '.assets/images/ui/icon-hand.png',
-    TREND_UP: '.assets/images/ui/icon-trend-up.png',
-    TREND_DOWN: '.assets/images/ui/icon-trend-down.png',
-    FARM: '.assets/images/ui/icon-farm.png',
-    MARKET: '.assets/images/ui/icon-chart.png',
-    SHOP: '.assets/images/ui/icon-shop.png',
-    BAG: '.assets/images/ui/icon-bag.png',
+    FISH: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/ui/icon-fish.png',
+    GOLD: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/ui/icon-gold.png',
+    TIMER: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/ui/icon-timer.png',
+    LOCK: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/ui/icon-lock.png',
+    WARNING: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/ui/icon-warning.png',
+    CLOSE: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/ui/icon-close.png',
+    TARGET: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/ui/icon-target.png',
+    HAND: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/ui/icon-hand.png',
+    TREND_UP: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/ui/icon-trend-up.png',
+    TREND_DOWN: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/ui/icon-trend-down.png',
+    FARM: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/ui/icon-farm.png',
+    MARKET: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/ui/icon-chart.png',
+    SHOP: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/ui/icon-shop.png',
+    BAG: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/ui/icon-bag.png',
   },
   NPCS: {
-    CAT_NEUTRAL: 'assets/images/npc/npc-cat-neutral.png',
-    CAT_HAPPY: 'assets/images/npc/npc-cat-happy.png',
-    CAT_SCARED: 'assets/images/npc/npc-cat-scared.png',
-    CAT_GOLDEN: 'assets/images/npc/npc-cat-golden.png',
-    BUG: 'assets/images/npc/entity-bug.png',
-    UFO: 'assets/images/npc/entity-ufo.png',
-    EXPLOSION: 'assets/images/npc/effect-explosion.png',
+CAT_NEUTRAL: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/npc/npc-cat-neutral.png',
+    CAT_HAPPY: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/npc/npc-cat-happy.png',
+    CAT_SCARED: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/npc/npc-cat-scared.png',    CAT_GOLDEN: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/npc/npc-cat-golden.png',
+    BUG: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/npc/entity-bug.png',
+    UFO: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/npc/entity-ufo.png',
+    EXPLOSION: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/npc/effect-explosion.png',
   },
   ITEMS: {
-    GOLDEN_PAW: '.assets/images/item/item-golden-paw.png',
-    INSTANT_GROW: '.assets/images/item/item-instant-grow.png',
-    EMP: '.assets/images/item/item-emp.png',
-    BINGO: '.assets/images/item/item-bingo-master.png',
+    GOLDEN_PAW: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/item/item-golden-paw.png',
+    INSTANT_GROW: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/item/item-instant-grow.png',
+    EMP: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/item/item-emp.png',
+    BINGO: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/item/item-bingo-master.png',
   },
   STATUS: {
-    WITHERED: '.assets/images/item/status-withered.png',
-    FROZEN: '.assets/images/item/status-frozen.png',
-    SPARKLE: '.assets/images/item/effect-sparkle.png',
+    WITHERED: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/item/status-withered.png',
+    FROZEN: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/item/status-frozen.png',
+    SPARKLE: 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main/assets/images/item/effect-sparkle.png',
   }
 };
 
@@ -131,12 +132,12 @@ const generateCrops = (): Crop[] => {
     const sellMultiplier = 1.6 + (index * 0.015);
     const baseSellPrice = Math.floor(seedPrice * sellMultiplier);
     
-    // Default image
+    // Default image - using placehold.co for generated ones, but with text
     let imageUrl = `https://placehold.co/128x128/transparent/transparent?text=${name.substring(0, 3).toUpperCase()}&font=roboto`;
     
-    // Assign specific images if available
-    if (name === "Apple") imageUrl = './assets/images/ui/apple.png';
-    if (name === "Carrot") imageUrl = './assets/images/ui/carrot.png';
+    // Assign specific images if available using the external base path
+    if (name === "Apple") imageUrl = `${BASE_PATH}/assets/images/ui/apple.png`;
+    if (name === "Carrot") imageUrl = `${BASE_PATH}/assets/images/ui/carrot.png`;
 
     crops.push({
       id: `crop_${index}`,

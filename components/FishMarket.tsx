@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Inventory, Crop } from '../types';
+import { Inventory, Crop, InventoryItemData } from '../types';
 import { FISH_MARKET_ITEMS, CROPS, COLORS, ASSET_PATHS } from '../constants';
 
 interface FishMarketProps {
@@ -14,7 +13,7 @@ export const FishMarket: React.FC<FishMarketProps> = ({ fish, gold, inventory, o
   const [activeTab, setActiveTab] = useState<'SHOP' | 'BAG'>('SHOP');
 
   // Filter for inventory items that actually exist
-  const inventoryItems = Object.entries(inventory).filter(([_, item]) => item.count > 0);
+  const inventoryItems = (Object.entries(inventory) as [string, InventoryItemData][]).filter(([_, item]) => item.count > 0);
 
   return (
     <div className="w-full h-full flex flex-col bg-slate-900 text-white relative overflow-hidden">
@@ -138,4 +137,3 @@ export const FishMarket: React.FC<FishMarketProps> = ({ fish, gold, inventory, o
     </div>
   );
 };
-    

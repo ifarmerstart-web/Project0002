@@ -1,7 +1,3 @@
-//시작화면
-// App.tsx 상단에 추가
-console.log("고양이 이미지 경로 확인:", ASSET_PATHS.NPCS.CAT_NEUTRAL);
-
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { InventorySidebar } from './components/InventorySidebar';
 import { FarmGrid } from './components/FarmGrid';
@@ -1078,7 +1074,6 @@ export default function App() {
                 src={miraeMood === 'happy' ? ASSET_PATHS.NPCS.CAT_HAPPY : miraeMood === 'scared' ? ASSET_PATHS.NPCS.CAT_SCARED : ASSET_PATHS.NPCS.CAT_NEUTRAL} 
                 alt="Mirae" 
                 className="w-14 h-14 drop-shadow-lg active:scale-95 transition-transform object-contain"
-                onError={(e) => e.currentTarget.src = "https://placehold.co/128x128/facc15/black?text=Cat&font=roboto"}
               />
               {notification && <div className="absolute top-12 left-0 w-32 bg-white text-slate-900 p-2 rounded-xl rounded-tl-none text-[10px] font-bold shadow-xl z-50 animate-bounce-in">{notification.message}</div>}
            </div>
@@ -1164,7 +1159,6 @@ export default function App() {
                  src={isGoldenCat ? ASSET_PATHS.NPCS.CAT_GOLDEN : ASSET_PATHS.NPCS.CAT_NEUTRAL} 
                  alt="Lucky Cat" 
                  className={`w-full h-full object-contain ${isGoldenCat ? 'brightness-125' : ''}`}
-                 onError={(e) => e.currentTarget.src = "https://placehold.co/128x128/facc15/black?text=Cat&font=roboto"}
                />
                
                <div className={`absolute -top-4 -right-6 text-white text-[10px] px-2 py-0.5 rounded-full font-black shadow-sm whitespace-nowrap ${
@@ -1285,10 +1279,10 @@ const StartScreen = ({ onStart, highScore }: { onStart: () => void, highScore: H
   return (
     <div className="h-full w-full flex flex-col items-center justify-center bg-gradient-to-br from-emerald-400 to-cyan-500 p-6 text-white">
       <img 
-        src={`${ASSET_PATHS.NPCS.CAT_NEUTRAL}?t=${Date.now()}`}
+        src={`${ASSET_PATHS.NPCS.CAT_NEUTRAL}?v=1`}
         alt="Cat" 
         className="w-40 h-40 mb-6 animate-bounce object-contain" 
-        //onError={(e) => e.currentTarget.src = "https://placehold.co/128x128/facc15/black?text=Cat&font=roboto"}//
+        referrerPolicy="no-referrer"
       />
       <h1 className="text-4xl font-black mb-2 text-center drop-shadow-md">미래의 황금 농장</h1>
       <p className="text-emerald-100 mb-8 text-center font-bold">3분 동안 최고의 수익을 올리세요!</p>
@@ -1380,7 +1374,6 @@ const GameOverScreen = ({ gold, fish, bingos, kills, maxCombo, onRestart, finalS
             src={ASSET_PATHS.NPCS.CAT_NEUTRAL} 
             className="w-6 h-6 object-contain" 
             alt="cat"
-            onError={(e) => e.currentTarget.src = "https://placehold.co/64x64/facc15/black?text=Cat&font=roboto"}
           />
         </button>
       </div>
