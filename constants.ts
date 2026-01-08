@@ -34,44 +34,44 @@ export const COLORS = {
 // --- ASSET PATHS ---
 // Base URL for external assets
 const BASE_PATH = 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main';
-
+const REPO_NAME = "/Project0002";
 export const ASSET_PATHS = {
 ICONS: {
-    FISH: './assets/images/ui/icon-fish.png',
-    GOLD: './assets/images/ui/icon-gold.png',
-    TIMER: './assets/images/ui/icon-timer.png',
-    LOCK: './assets/images/ui/icon-lock.png',
-    FARM: './assets/images/ui/icon-farm.png',
-    MARKET: './assets/images/ui/icon-chart.png',
-    SHOP: './assets/images/ui/icon-shop.png',
-    BAG: './assets/images/ui/icon-bag.png',
-    CLOSE: './assets/images/ui/icon-close.png',
-    TARGET: './assets/images/ui/icon-target.png',
-    HAND: './assets/images/ui/icon-hand.png',
-    TREND_UP: './assets/images/ui/icon-trend-up.png',
-    TREND_DOWN: './assets/images/ui/icon-trend-down.png',
-    WARNING: './assets/images/ui/icon-warning.png',
+    FISH: `${REPO_NAME}/assets/images/ui/icon-fish.png`,
+    GOLD: `${REPO_NAME}/assets/images/ui/icon-gold.png`,
+    TIMER: `${REPO_NAME}/assets/images/ui/icon-timer.png`,
+    LOCK: `${REPO_NAME}/assets/images/ui/icon-lock.png`,
+    FARM: `${REPO_NAME}/assets/images/ui/icon-farm.png`,
+    MARKET: `${REPO_NAME}/assets/images/ui/icon-chart.png`,
+    SHOP: `${REPO_NAME}/assets/images/ui/icon-shop.png`,
+    BAG: `${REPO_NAME}/assets/images/ui/icon-bag.png`,
+    CLOSE: `${REPO_NAME}/assets/images/ui/icon-close.png`,
+    TARGET: `${REPO_NAME}/assets/images/ui/icon-target.png`,
+    HAND: `${REPO_NAME}/assets/images/ui/icon-hand.png`,
+    TREND_UP: `${REPO_NAME}/assets/images/ui/icon-trend-up.png`,
+    TREND_DOWN: `${REPO_NAME}/assets/images/ui/icon-trend-down.png`,
+    WARNING: `${REPO_NAME}/assets/images/ui/icon-warning.png`,
   },
   NPCS: {
     // 파일명 대소문자가 실제 파일과 100% 일치하는지 확인하세요. (예: npc-cat-neutral.png)
-    CAT_NEUTRAL: './assets/images/npc/npc-cat-neutral.png',
-    CAT_HAPPY: './assets/images/npc/npc-cat-happy.png',
-    CAT_SCARED: './assets/images/npc/npc-cat-scared.png',
-    CAT_GOLDEN: './assets/images/npc/npc-cat-golden.png',
-    BUG: './assets/images/npc/entity-bug.png',
-    UFO: './assets/images/npc/entity-ufo.png',
-    EXPLOSION: './assets/images/npc/effect-explosion.png',
+    CAT_NEUTRAL: `${REPO_NAME}/assets/images/npc/npc-cat-neutral.png`,
+    CAT_HAPPY: `${REPO_NAME}/assets/images/npc/npc-cat-happy.png`,
+    CAT_SCARED: `${REPO_NAME}/assets/images/npc/npc-cat-scared.png`,
+    CAT_GOLDEN: `${REPO_NAME}/assets/images/npc/npc-cat-golden.png`,
+    BUG: `${REPO_NAME}/assets/images/npc/entity-bug.png`,
+    UFO: `${REPO_NAME}/assets/images/npc/entity-ufo.png`,
+    EXPLOSION: `${REPO_NAME}/assets/images/npc/effect-explosion.png`,
   },
   ITEMS: {
-    GOLDEN_PAW: './assets/images/item/item-golden-paw.png',
-    INSTANT_GROW: './assets/images/item/item-instant-grow.png',
-    EMP: './assets/images/item/item-emp.png',
-    BINGO: './assets/images/item/item-bingo-master.png',
+    GOLDEN_PAW: `${REPO_NAME}/assets/images/item/item-golden-paw.png`,
+    INSTANT_GROW: `${REPO_NAME}/assets/images/item/item-instant-grow.png`,
+    EMP: `${REPO_NAME}/assets/images/item/item-emp.png`,
+    BINGO: `${REPO_NAME}/assets/images/item/item-bingo-master.png`,
   },
   STATUS: {
-    WITHERED: './assets/images/item/status-withered.png',
-    FROZEN: './assets/images/item/status-frozen.png',
-    SPARKLE: './assets/images/item/effect-sparkle.png',
+    WITHERED: `${REPO_NAME}/assets/images/item/status-withered.png`,
+    FROZEN: `${REPO_NAME}/assets/images/item/status-frozen.png`,
+    SPARKLE: `${REPO_NAME}/assets/images/item/effect-sparkle.png`,
   }
 };
 
