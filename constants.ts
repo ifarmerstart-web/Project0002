@@ -34,7 +34,7 @@ export const COLORS = {
 // --- ASSET PATHS ---
 // Base URL for external assets
 const BASE_PATH = 'https://raw.githubusercontent.com/ifarmerstart-web/Project0002/main';
-const REPO_NAME = "/Project0002";
+const REPO_NAME = "https://raw.githubusercontent.com/ifarmerstart-web/Project0002";
 export const ASSET_PATHS = {
 ICONS: {
     FISH: `${REPO_NAME}/assets/images/ui/icon-fish.png`,
